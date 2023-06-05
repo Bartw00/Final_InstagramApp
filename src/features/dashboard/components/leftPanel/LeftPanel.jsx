@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/system";
 
 import FollowStats from "../followStats/FollowStats";
-import Divider from "@mui/material/Divider";
 import IconLabelTabs from "./navDrawer/iconLabelTabs";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -16,6 +15,8 @@ const LeftPanelContainer = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   margin: "0px",
+  position: "fixed",
+  minWidth: "400px",
   // height: "100vh",
   flexGrow: 1,
 });

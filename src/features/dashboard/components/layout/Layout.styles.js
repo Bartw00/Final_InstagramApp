@@ -11,7 +11,7 @@ export const SidebarContainer = styled("div")(({ theme }) => ({
   padding: theme.spacing(0),
   paddingLeft: "0px",
   backgroundColor: "#1A1A24",
-//   minHeight: 400,
+  minHeight: "100vh",
 }));
 
 export const ContentContainer = styled("div")(({ theme }) => ({
@@ -30,4 +30,5 @@ export const RightPanel = styled("div")(({ theme }) => ({
   padding: theme.spacing(3),
 //   backgroundColor: theme.palette.grey[100],
   backgroundColor: "#2E2E38",
+  minHeight: "100vh",
 }));
