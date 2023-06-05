@@ -5,8 +5,12 @@ import AppBar from "@mui/material/AppBar";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FormattedMessage } from "react-intl";
 
+
 export default function Header() {
   const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+
+
 
   return (
     <AppBar position="static" color="default">
@@ -14,12 +18,15 @@ export default function Header() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <FormattedMessage
             id="common.appTitle"
-            defaultMessage={"Weather App"}
+            defaultMessage={"Instagram App"}
           />
         </Typography>
         <Button color="inherit" onClick={loginWithRedirect}>
           <FormattedMessage id="landing.login" defaultMessage={"Login"} />
         </Button>
+        {/* <Button color="inherit" onClick={logout}>
+          <FormattedMessage id="landing.logout" defaultMessage={"Logout"} />
+        </Button> */}
       </Toolbar>
     </AppBar>
   );

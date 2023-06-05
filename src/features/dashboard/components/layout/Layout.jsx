@@ -1,7 +1,7 @@
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 
-import ShowProfile from "../showUserProfile/ShowUserProfile";
-import Sidebar from "../sidebar/Sidebar";
+// import ShowProfile from "../showUserProfile/ShowUserProfile";
+// import Sidebar from "../sidebar/Sidebar";
 
 import {
   ContentContainer,
@@ -10,21 +10,17 @@ import {
   SidebarContainer,
   RightPanel,
 } from "./Layout.styles";
+import LeftPanel from "../leftPanel/LeftPanel";
+import FeedPanel from "../rightPanel/FeedPanel";
 
 export default function Layout({ children }) {
   return (
     <RootContainer>
       <SidebarContainer>
-        <Sidebar />
+        <LeftPanel />
       </SidebarContainer>
       <RightPanel>
-        <Header>
-          <div>
-            <Typography>Today</Typography>
-            <Typography>Week</Typography>
-          </div>
-          <ShowProfile />
-        </Header>
+        {/* <FeedPanel /> */}
         <ContentContainer>{children}</ContentContainer>
       </RightPanel>
     </RootContainer>

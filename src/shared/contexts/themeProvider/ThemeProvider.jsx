@@ -1,3 +1,4 @@
+import { WidthFull } from "@mui/icons-material";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import {
@@ -6,7 +7,11 @@ import {
   responsiveFontSizes,
 } from "@mui/material/styles";
 
-let theme = createTheme();
+let theme = createTheme({
+  typography: {
+    fontFamily: 'DM Sans',
+  },
+});
 theme = responsiveFontSizes(theme);
 
 export default function CustomThemeProvider({ children }) {

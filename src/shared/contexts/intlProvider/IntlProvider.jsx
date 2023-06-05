@@ -1,6 +1,6 @@
 import { IntlProvider } from "react-intl";
 
-import messagesInPolish from "../../../../lang/pl.json";
+import messagesInPolish from "../../../../src/lang/pl.json";
 
 export default function CustomIntlProvider({ children }) {
   // TODO Context z mozliwoscia zmainy locale messages

@@ -11,6 +11,9 @@ import ApiProvider from "./shared/contexts/apiProvider";
 import IntlProvider from "./shared/contexts/intlProvider";
 import LandingPage from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
+import "./App.css";
+import Explore from "./pages/Explore";
+
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth0();
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <Dashboard />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/explore",
+    element: (
+      <ProtectedRoute>
+        <Explore />
       </ProtectedRoute>
     ),
   },

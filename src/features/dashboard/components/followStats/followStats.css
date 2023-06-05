@@ -1,0 +1,25 @@
+.svgStyle {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.stats {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.followers {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #c4c4cd;
+}
+.count {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
