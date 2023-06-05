@@ -8,7 +8,7 @@ const TopPanelContainer = styled(Box)({
   color: "white",
   display: "flex",
   flexDirection: "row",
-  alignItems: "baseline",
+  // alignItems: "baseline",
   justifyContent: "space-between",
   margin: "0px",
   padding: "0px",
