@@ -16,8 +16,8 @@ const Dashboard = () => {
           item
           xl={12}
           lg={12}
-          md={12}
-          sm={12}
+          md={8}
+          sm={4}
           sx={{
             // height: "100vh",
             // width: "100vw",

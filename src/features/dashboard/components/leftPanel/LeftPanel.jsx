@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import Profile from "./showUserProfile/ShowUserProfile";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/system";
+import { useEffect, useRef } from "react";
 
 import FollowStats from "../followStats/FollowStats";
 import IconLabelTabs from "./navDrawer/iconLabelTabs";
@@ -15,17 +16,51 @@ const LeftPanelContainer = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   margin: "0px",
+  width: "400px",
   position: "fixed",
-  minWidth: "400px",
-  // height: "100vh",
-  flexGrow: 1,
+  top: 0,
+  bottom: 0,
+  overflowY: "auto",
+  "&::-webkit-scrollbar": {
+    width: "0.1em",
+  },
+  "&::-webkit-scrollbar-track": {
+    boxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+    webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+  },
+  "&::-webkit-scrollbar-thumb": {
+    backgroundColor: "#1A1A24",
+    outline: "1px solid slategrey",
+  },
+});
+
+const ScrollingContainer = styled(Box)({
+  padding: "4px",
+  width: "400px",
 });
 
 export default function LeftPanel() {
   const { logout } = useAuth0();
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const contentHeight = contentRef.current?.offsetHeight || 0;
+      const containerHeight = window.innerHeight;
+      const isScrollable = contentHeight > containerHeight;
+      contentRef.current.style.overflowY = isScrollable ? "auto" : "visible";
+    };
+
+    handleScroll();
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
   return (
-    <Box>
-      <LeftPanelContainer item="true" md={12}>
+    <LeftPanelContainer>
+      <ScrollingContainer ref={contentRef}>
         <Profile />
         <Typography variant="body2" sx={{ marginTop: "16px" }}>
           @nickname
@@ -44,7 +79,7 @@ export default function LeftPanel() {
         >
           Logout
         </Button>
-      </LeftPanelContainer>
-    </Box>
+      </ScrollingContainer>
+    </LeftPanelContainer>
   );
 }

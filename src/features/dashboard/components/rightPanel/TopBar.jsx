@@ -13,6 +13,7 @@ const TopPanelContainer = styled(Box)({
   margin: "0px",
   padding: "0px",
   width: "100%",
+  alignItems: "center",
   // height: "100vh",
   flexGrow: 1,
 });
