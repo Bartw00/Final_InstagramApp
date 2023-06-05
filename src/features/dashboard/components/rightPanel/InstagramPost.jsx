@@ -6,13 +6,14 @@ import {
   DialogActions,
   Button,
   Typography,
+  Divider,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import ModeCommentIcon from '@mui/icons-material/ModeComment';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import ModeCommentIcon from "@mui/icons-material/ModeComment";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 
 const DialogContainer = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
@@ -30,10 +31,21 @@ const IconGroup = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
-  marginTop: theme.spacing(2),
+  marginTop: theme.spacing(1),
 }));
 
+const getRandomDate = () => {
+  const startDate = new Date(2020, 0, 1);
+  const endDate = new Date();
+  const randomDate = new Date(
+    startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime())
+  );
+  return randomDate.toDateString();
+};
+
 const InstagramPost = ({ photo, onClose }) => {
+  const randomDate = getRandomDate();
+
   return (
     <DialogContainer open={!!photo} onClose={onClose}>
       <DialogTitle>{photo.photographer}</DialogTitle>
@@ -50,6 +62,8 @@ const InstagramPost = ({ photo, onClose }) => {
           {photo && photo.alt ? photo.alt : "Lorem ipsum dolor..."}
         </Typography>
 
+        <Divider sx={{ backgroundColor: "#747480", marginTop: "24px" }} />
+
         <IconGroup>
           <div>
             <IconButton
@@ -59,7 +73,10 @@ const InstagramPost = ({ photo, onClose }) => {
               <FavoriteIcon />
             </IconButton>
             <IconButton>
-              <ModeCommentIcon aria-label="comment" style={{ color: "white" }} />
+              <ModeCommentIcon
+                aria-label="comment"
+                style={{ color: "white" }}
+              />
             </IconButton>
             <IconButton aria-label="share" style={{ color: "white" }}>
               <ShareIcon />
@@ -72,6 +89,9 @@ const InstagramPost = ({ photo, onClose }) => {
             <BookmarkBorderIcon />
           </IconButton>
         </IconGroup>
+        <Typography variant="overline" sx={{ color: "#747480" }}>
+          Date: {randomDate}
+        </Typography>
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Close</Button>
