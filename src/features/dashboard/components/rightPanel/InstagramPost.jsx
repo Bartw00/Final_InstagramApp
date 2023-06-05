@@ -36,7 +36,7 @@ const IconGroup = styled("div")(({ theme }) => ({
 const InstagramPost = ({ photo, onClose }) => {
   return (
     <DialogContainer open={!!photo} onClose={onClose}>
-      <DialogTitle>Instagram Post</DialogTitle>
+      <DialogTitle>{photo.photographer}</DialogTitle>
       <DialogContent>
         {photo && (
           <img
