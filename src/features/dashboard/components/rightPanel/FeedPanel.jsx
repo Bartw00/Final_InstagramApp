@@ -11,7 +11,7 @@ const RightPanelContainer = styled(Box)({
   margin: "0px",
   padding: "0px",
   // height: "100vh",
-  // width: "100%",
+  width: "100%",
 });
 
 export default function FeedPanel() {
