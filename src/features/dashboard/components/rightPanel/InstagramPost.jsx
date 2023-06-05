@@ -11,7 +11,8 @@ import { styled } from "@mui/system";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ModeCommentIcon from '@mui/icons-material/ModeComment';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 const DialogContainer = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
@@ -19,6 +20,17 @@ const DialogContainer = styled(Dialog)(({ theme }) => ({
     color: "white",
   },
   // padding: "80px",
+  height: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+}));
+
+const IconGroup = styled("div")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  width: "100%",
+  marginTop: theme.spacing(2),
 }));
 
 const InstagramPost = ({ photo, onClose }) => {
@@ -34,16 +46,32 @@ const InstagramPost = ({ photo, onClose }) => {
           />
         )}
         <Typography variant="body2" sx={{ marginTop: "16px" }}>
-          Description: {photo.alt}
+          <span style={{ fontWeight: "bold" }}>Description:</span>{" "}
+          {photo && photo.alt ? photo.alt : "Lorem ipsum dolor..."}
         </Typography>
 
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMoreIcon />
+        <IconGroup>
+          <div>
+            <IconButton
+              aria-label="add to favorites"
+              style={{ color: "white" }}
+            >
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton>
+              <ModeCommentIcon aria-label="comment" style={{ color: "white" }} />
+            </IconButton>
+            <IconButton aria-label="share" style={{ color: "white" }}>
+              <ShareIcon />
+            </IconButton>
+          </div>
+          <IconButton
+            aria-label="expand more"
+            style={{ color: "white", marginLeft: "auto" }}
+          >
+            <BookmarkBorderIcon />
+          </IconButton>
+        </IconGroup>
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Close</Button>
