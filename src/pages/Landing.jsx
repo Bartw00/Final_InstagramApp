@@ -32,7 +32,7 @@ const Landing = () => {
           buttons={["play", "repeat", "frame", "debug"]}
         />
       </Player>
-      <Box sx={{ color: "#fff", height: "100vh", overflow: "hidden" }}>
+      <Box sx={{ color: "#fff", height: "auto", overflow: "hidden" }}>
         <Typography variant="h2" component="h1">
           This is the best instagram desktop app you can imagine!
         </Typography>

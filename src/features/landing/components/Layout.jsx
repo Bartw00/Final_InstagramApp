@@ -6,6 +6,10 @@ const HeaderContainer = styled(Box)({
   flexGrow: 1,
 });
 
+const ChildrenContainer = styled(Container)({
+  height: "100vh",
+});
+
 import Header from "./Header";
 
 export default function Layout({ children }) {
@@ -14,7 +18,7 @@ export default function Layout({ children }) {
       <HeaderContainer>
         <Header />
       </HeaderContainer>
-      <Container>{children}</Container>
+      <ChildrenContainer>{children}</ChildrenContainer>
     </>
   );
 }
