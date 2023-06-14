@@ -31,12 +31,10 @@ const InstagramFeed = () => {
     fetchData();
   }, []);
 
-  // Handle photo selection
   const handlePhotoClick = (photo) => {
     setSelectedPhoto(photo);
   };
 
-  // Render the selected photo in the InstagramPost component
   const renderSelectedPhoto = () => {
     if (selectedPhoto) {
       return <InstagramPost photo={selectedPhoto} onClose={() => setSelectedPhoto(null)} />;

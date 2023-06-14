@@ -7,12 +7,10 @@
 .scrolling-group {
   display: flex;
   flex-direction: row;
-  /* Add any other styles for your content */
 }
 .scrolling-group-container::-webkit-scrollbar {
-  width: 0.5rem; /* Adjust the width as needed */
-  background-color: transparent; /* Set the background color to transparent */
-  /* display: none; */
+  width: 0.5rem; 
+  background-color: transparent; 
 }
 
 .scrolling-group-container::-webkit-scrollbar-thumb {
@@ -21,5 +19,5 @@
     0,
     0,
     0.2
-  ); /* Adjust the color and transparency as needed */
+  ); 
 }

@@ -14,7 +14,6 @@ const Dashboard = () => {
           sm={4}
           sx={
             {
-              // height: "100vh",
               width: "100%",
             }
           }

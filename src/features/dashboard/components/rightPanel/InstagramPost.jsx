@@ -8,7 +8,7 @@ import {
   Typography,
   Divider,
 } from "@mui/material";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
@@ -20,7 +20,6 @@ const DialogContainer = styled(Dialog)(({ theme }) => ({
     backgroundColor: "#1A1A24",
     color: "white",
   },
-  // padding: "80px",
   height: "100vh",
   display: "flex",
   flexDirection: "column",

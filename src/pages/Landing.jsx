@@ -1,7 +1,6 @@
 import Typography from "@mui/material/Typography";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { FormattedMessage } from "react-intl";
 
 import Layout from "../features/landing/components/Layout";
 import { Box, Button } from "@mui/material";

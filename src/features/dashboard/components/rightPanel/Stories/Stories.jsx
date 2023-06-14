@@ -34,9 +34,6 @@ const StoriesContainer = styled(Box)({
   padding: "0px",
   width: "100%",
   marginTop: "24px", 
-//   overflowX: "auto",
-//   scrollbarWidth: "thin",
-  // height: "100vh",
 });
 
 export default function Stories() {

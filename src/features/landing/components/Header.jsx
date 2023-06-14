@@ -24,9 +24,6 @@ export default function Header() {
         <Button color="inherit" onClick={loginWithRedirect}>
           <FormattedMessage id="landing.login" defaultMessage={"Login"} />
         </Button>
-        {/* <Button color="inherit" onClick={logout}>
-          <FormattedMessage id="landing.logout" defaultMessage={"Logout"} />
-        </Button> */}
       </Toolbar>
     </AppBar>
   );

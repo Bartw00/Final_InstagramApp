@@ -1,4 +1,3 @@
-import { WidthFull } from "@mui/icons-material";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import {

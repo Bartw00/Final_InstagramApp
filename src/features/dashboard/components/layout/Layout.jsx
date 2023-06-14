@@ -14,7 +14,6 @@ export default function Layout({ children }) {
         <LeftPanel />
       </SidebarContainer>
       <RightPanel>
-        {/* <FeedPanel /> */}
         <ContentContainer>{children}</ContentContainer>
       </RightPanel>
     </RootContainer>

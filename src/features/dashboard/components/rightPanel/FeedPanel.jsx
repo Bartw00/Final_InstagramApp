@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import TopBar from "./TopBar";
 import Stories from "./Stories/Stories";
@@ -10,7 +10,6 @@ const RightPanelContainer = styled(Box)({
   alignItems: "flex-start",
   margin: "0px",
   padding: "0px",
-  // height: "100vh",
   width: "100%",
 });
 

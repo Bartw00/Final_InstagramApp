@@ -1,10 +1,8 @@
 import { Container, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./followStats.css";
-// import Divider from "@mui/material/Divider";
 
 const FollowStatsContainer = styled(Container)({
-  // Your styling properties
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-evenly",
@@ -21,7 +19,6 @@ export default function FollowStats() {
         <Typography variant="body2">Posts</Typography>
         <Typography variant="h6">123</Typography>
       </div>
-      {/* <Divider orientation="vertical" light={true} variant="middle" /> */}
       <svg
         className="svgStyle"
         width="1"
@@ -37,7 +34,6 @@ export default function FollowStats() {
         <Typography variant="body2">Followers</Typography>
         <Typography variant="h6">123</Typography>
       </div>
-      {/* <Divider variant="middle" light={true} orientation="vertical" /> */}
       <svg
         className="svgStyle"
         width="1"

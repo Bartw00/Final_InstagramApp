@@ -1,7 +1,6 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Profile from "./showUserProfile/ShowUserProfile";
-import Grid from "@mui/material/Grid";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import { useEffect, useRef } from "react";
 
 import FollowStats from "../followStats/FollowStats";
