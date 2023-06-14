@@ -19,7 +19,6 @@ const InstagramFeed = () => {
             Authorization: import.meta.env.VITE_PEXEL_API_KEY,
           },
         });
-        console.log(response);
         setFeedData(response.data.photos);
       } catch (error) {
         console.error("Error fetching Instagram feed:", error);

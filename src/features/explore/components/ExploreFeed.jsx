@@ -21,7 +21,6 @@ const ExploreFeed = () => {
             },
           }
         );
-        console.log(response);
         setFeedData(response.data.photos);
       } catch (error) {
         console.error("Error fetching Explore feed:", error);
