@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import SearchComponent from "./Search";
 import AddCircleIcon from "@mui/icons-material/AddCircle";

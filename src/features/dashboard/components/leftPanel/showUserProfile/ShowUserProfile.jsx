@@ -11,11 +11,11 @@ const UserContainer = styled(Box)({
   alignItems: "center",
 });
 
-const borderStyle = {
-  borderWidth: "2px",
+const AvatarStyled = styled(Avatar)({
+  borderWidth: "5px",
   borderStyle: "solid",
-  border: "5px solid #D24C6A",
-};
+  borderColor: "#D24C6A",
+});
 
 const Profile = () => {
   const { user, isLoading } = useAuth0();
@@ -30,8 +30,7 @@ const Profile = () => {
 
   return (
     <UserContainer>
-      <Avatar
-        style={borderStyle}
+      <AvatarStyled
         variant="circular"
         src={user.picture}
         alt={user.name}
